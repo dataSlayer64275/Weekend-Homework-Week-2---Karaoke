@@ -9,10 +9,4 @@ attr_accessor :wallet
     @favourite_song = favourite_song
   end
 
-  def room_has_guest_favourite_song(room, guest)
-    if room.songs.include?(guest.favourite_song)
-      "Whoo!"
-    end
-  end
-
 end

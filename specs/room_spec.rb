@@ -52,6 +52,10 @@ class RoomTest < MiniTest::Test
     assert_equal(1, @room1.number_of_songs_added)
   end
 
+  def test_room_has_guest_favourite_song
+    @room1.add_song_to_room("I will survive")
+    assert_equal("Whoo!", @room1.room_has_guest_favourite_song(@guest1))
+  end
 
 
 end

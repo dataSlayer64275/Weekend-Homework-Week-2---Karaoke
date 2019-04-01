@@ -36,4 +36,10 @@ attr_reader :number, :capacity, :guests
     @songs.length
   end
 
+  def room_has_guest_favourite_song(guest)
+    if @songs.include?(guest.favourite_song)
+      "Whoo!"
+    end
+  end
+
 end
