@@ -7,9 +7,9 @@ class RoomTest < MiniTest::Test
 
   def setup
     @room1 = Room.new(1)
-    @guest1 = Guest.new("Rob Johnson")
-    @guest2 = Guest.new("Mary Johnson")
-    @guest3 = Guest.new("Jeremy Phillips")
+    @guest1 = Guest.new("Rob Johnson", "I will survive")
+    @guest2 = Guest.new("Mary Johnson", "Eye of the tiger")
+    @guest3 = Guest.new("Jeremy Phillips", "Lose yourself")
   end
 
 
@@ -51,5 +51,7 @@ class RoomTest < MiniTest::Test
     @room1.add_song_to_room(@song1)
     assert_equal(1, @room1.number_of_songs_added)
   end
+
+
 
 end
